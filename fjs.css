@@ -1,0 +1,21 @@
+#content{
+ margin-top:5%;
+}
+p
+{
+ font-family:"Helvetica", Arial, sans;
+ text-align:center;
+ font-weight: bold;
+}
+
+h1
+{
+ font-size:500%;
+ margin-top:0px;
+ margin-bottom:0px;
+}
+
+h2
+{
+ font-size:200%;
+}
