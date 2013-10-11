@@ -93,8 +93,8 @@ function find(){
 	drinkingcountriesstring = (drinkingcountries.join(dcsseparator));
 	
 	
-	//alter curmins, which will alter the "next refresh" time
-	curmins = actualtime;
+	//alter pageloadtime (should probably rename, huh?), which will alter the "next refresh" time
+	pageloadtime = actualtime;
 	
 	//make an "array" of results that are addressable by name.
 	var res = {drinkingcountries: drinkingcountries, drinkingtimes: drinkingtimes, drinkingcountriesstring: drinkingcountriesstring, drinkingtimestring: drinkingtimestring, actualtime: actualtime}
