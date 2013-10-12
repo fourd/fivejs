@@ -1,6 +1,13 @@
 //TICK TOCK CAPTAIN
 var pageloadtime = moment();
 function now(){var innernow = moment(); return innernow}
+//if 5pm was less than 12 hours ago, tell me that instead of resetting at midnight
+var tickover=moment(pageloadtime).clone().startOf("day").add("hour",5);
+if (moment(pageloadtime).isAfter(tickover)){
+	var local5 = "is " + moment().hours(17).minutes(0).second(0).fromNow();
+}else{
+	var local5 = "was " + moment().hours(17-24).minutes(0).second(0).fromNow();
+};
 
 function gentimeout(){
 var curmins = now().clone().format("mm");
@@ -11,8 +18,8 @@ var timeoutms = timeoutmins*60*1000;
 return timeoutms
 };
 
-
 var getfresh=setInterval(function(){find()},gentimeout());
+
 //takes an array, returns an array composed of an alphabetically sorted version of that array with no duplicates
 function sort_unique(arr) {
 	arr = arr.sort();
@@ -83,7 +90,7 @@ function find(){
 	drinkingcountriesstring = (drinkingcountries.join(dcsseparator));
 	
 	
-	//alter curmins, which will alter the "next refresh" time
+	//alter pageloadtime (should probably rename, huh?), which will alter the "next refresh" time
 	pageloadtime = actualtime;
 	
 	//make an "array" of results that are addressable by name.
@@ -91,6 +98,7 @@ function find(){
 	
 	//let's get this party fukken started
 	document.getElementById("one").innerHTML="It's 5 o'clock in...</p><h1>" + drinkingtimestring + "</h1><h2>" + drinkingcountriesstring + "</h2>";
+	document.getElementById("two").innerHTML="5 o'clock your time " + local5 + " or so.";
 	//don't forget to return your array of results!
 	return res;
 };
