@@ -1,28 +1,17 @@
 //TICK TOCK CAPTAIN
 var pageloadtime = moment();
 function now(){var innernow = moment(); return innernow}
-//if 5pm was less than 12 hours ago, tell me that instead of resetting at midnight
-var tickover=moment(pageloadtime).clone().startOf("day").add("hour",5);
-if (moment(pageloadtime).isAfter(tickover)){
-	var local5 = "is " + moment().hours(17).minutes(0).second(0).fromNow();
-}else{
-	var local5 = "was " + moment().hours(17-24).minutes(0).second(0).fromNow();
-};
+
+function gentimeout(){
 var curmins = now().clone().format("mm");
 var nrmins = (curmins - (curmins % 15) + 15)
 var nrtime = now().clone().minutes(nrmins).seconds(0);
 var timeoutmins = nrtime.minutes() - pageloadtime.minutes();
 var timeoutms = timeoutmins*60*1000;
+return timeoutms
+};
 
-var getfresh=setInterval(function(){find()},timeoutms);
-/*TODO:
- set a timeout thingy on find that makes it recheck every round 15 minutes (should be easily cannibalisable from the smartarse.php). See if doing something like: if(minute%15=0){findplaces();} is better (but how do you check minute? you'd need a function with a timeout of 5 minutes?)
- 
- finally: 
- get requirejs involved to modularise this shit!
- strip out all unused data from moment scripts (unless this is done by magic when minifying. find out)
- use rjs to minify
-*/
+var getfresh=setInterval(function(){find()},gentimeout());
 //takes an array, returns an array composed of an alphabetically sorted version of that array with no duplicates
 function sort_unique(arr) {
 	arr = arr.sort();
@@ -94,14 +83,13 @@ function find(){
 	
 	
 	//alter curmins, which will alter the "next refresh" time
-	curmins = actualtime;
+	pageloadtime = actualtime;
 	
 	//make an "array" of results that are addressable by name.
 	var res = {drinkingcountries: drinkingcountries, drinkingtimes: drinkingtimes, drinkingcountriesstring: drinkingcountriesstring, drinkingtimestring: drinkingtimestring, actualtime: actualtime}
 	
 	//let's get this party fukken started
 	document.getElementById("one").innerHTML="It's 5 o'clock in...</p><h1>" + drinkingtimestring + "</h1><h2>" + drinkingcountriesstring + "</h2>";
-	document.getElementById("two").innerHTML="5 o'clock your time " + local5 + " or so.";
 	//don't forget to return your array of results!
 	return res;
 };
