@@ -1,13 +1,6 @@
 //TICK TOCK CAPTAIN
 var pageloadtime = moment();
 function now(){var innernow = moment(); return innernow}
-//if 5pm was less than 12 hours ago, tell me that instead of resetting at midnight
-var tickover=moment(pageloadtime).clone().startOf("day").add("hour",5);
-if (moment(pageloadtime).isAfter(tickover)){
-	var local5 = "is " + moment().hours(17).minutes(0).second(0).fromNow();
-}else{
-	var local5 = "was " + moment().hours(17-24).minutes(0).second(0).fromNow();
-};
 
 function gentimeout(){
 var curmins = now().clone().format("mm");
@@ -98,7 +91,6 @@ function find(){
 	
 	//let's get this party fukken started
 	document.getElementById("one").innerHTML="It's 5 o'clock in...</p><h1>" + drinkingtimestring + "</h1><h2>" + drinkingcountriesstring + "</h2>";
-	document.getElementById("two").innerHTML="5 o'clock your time " + local5 + " or so.";
 	//don't forget to return your array of results!
 	return res;
 };
