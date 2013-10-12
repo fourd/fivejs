@@ -8,21 +8,18 @@ if (moment(pageloadtime).isAfter(tickover)){
 }else{
 	var local5 = "was " + moment().hours(17-24).minutes(0).second(0).fromNow();
 };
+
+function gentimeout(){
 var curmins = now().clone().format("mm");
 var nrmins = (curmins - (curmins % 15) + 15)
 var nrtime = now().clone().minutes(nrmins).seconds(0);
 var timeoutmins = nrtime.minutes() - pageloadtime.minutes();
 var timeoutms = timeoutmins*60*1000;
+return timeoutms
+};
 
-var getfresh=setInterval(function(){find()},timeoutms);
-/*TODO:
- set a timeout thingy on find that makes it recheck every round 15 minutes (should be easily cannibalisable from the smartarse.php). See if doing something like: if(minute%15=0){findplaces();} is better (but how do you check minute? you'd need a function with a timeout of 5 minutes?)
- 
- finally: 
- get requirejs involved to modularise this shit!
- strip out all unused data from moment scripts (unless this is done by magic when minifying. find out)
- use rjs to minify
-*/
+var getfresh=setInterval(function(){find()},gentimeout());
+
 //takes an array, returns an array composed of an alphabetically sorted version of that array with no duplicates
 function sort_unique(arr) {
 	arr = arr.sort();
