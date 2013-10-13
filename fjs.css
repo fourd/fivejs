@@ -1,7 +1,3 @@
-#everything{
-	width: 90%;
-}
-
 html {
    height: 100%;
 } 
@@ -25,7 +21,7 @@ body {
 
    margin: 0;
    height: 90%;
-   width: 100% /* needed for Firefox */
+   width: 100%;
 } 
 p
 {
