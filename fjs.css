@@ -1,6 +1,10 @@
 html {
    height: 100%;
-} 
+}
+
+#everything{
+	width:90%;
+}
 
 body {
    display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
