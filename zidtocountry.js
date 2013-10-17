@@ -120,7 +120,7 @@ var zidtocountry = {
 	"America/Montevideo": ["Uruguay"],
 	"America/Montreal": ["Canada"],
 	"America/Montserrat": ["Montserrat"],
-	"America/Nassau": ["Bahamas"],
+	"America/Nassau": ["The Bahamas"],
 	"America/New_York": ["United States"],
 	"America/Nome": ["Alaska, USA"],
 	"America/Panama": ["Panama"],
