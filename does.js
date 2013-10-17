@@ -11,7 +11,7 @@ var timeoutms = timeoutmins*60*1000;
 return timeoutms
 };
 
-var getfresh=setInterval(function(){find()},gentimeout());
+var getfresh=setTimeout(function(){find()},gentimeout());
 
 //takes an array, returns an array composed of an alphabetically sorted version of that array with no duplicates
 function sort_unique(arr) {
