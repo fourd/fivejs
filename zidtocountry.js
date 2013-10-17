@@ -91,7 +91,7 @@ var zidtocountry = {
 	"America/El_Salvador": ["El Salvador"],
 	"America/Fortaleza": ["Brazil"],
 	"America/Godthab": ["Greenland"],
-	"America/Grand_Turk": ["Turks & Caicos Is"],
+	"America/Grand_Turk": ["Turks & Caicos Islands"],
 	"America/Grenada": ["Grenada"],
 	"America/Guadeloupe": ["Guadeloupe"],
 	"America/Guatemala": ["Guatemala"],
