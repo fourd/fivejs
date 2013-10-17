@@ -10,13 +10,16 @@
 	</head>
 	<body>
 		<div id="everything">
-			<p id="one">You need to enable javascript for this site to work. You can <a href="https://github.com/fourd/fivejs">view the source code</a> if you like.</p>
+			<p id="prefix">You need to enable javascript for this site to work. You can <a href="https://github.com/fourd/fivejs">view the source code</a> if you like.</p>
+			<p id="gmtstring"></p>
+			<p id="countrystring"></p>
 		</div>
+		<script>document.getElementById("prefix").innerHTML="Loading...";</script>
 		<script src="moment/moment.min.js"></script>
 		<script src="moment/moment-timezone.min.js"></script>
 		<script src="moment/moment-timezone-data.min.js"></script>
 		<script src="zidtocountry.js"></script>
-		<script src="does.js"></script>
+		<script src="doestwo.js"></script>
 		<!-- todo: use require.js so only does.js is showing-->
 	</body>
 </html>
