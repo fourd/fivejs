@@ -8,7 +8,7 @@ var zidtocountry = {
 	"Asia/Yerevan": ["Armenia"],
 	"America/Curacao": ["St Maarten (Dutch part)"],
 	"Africa/Luanda": ["Angola"],
-	"Antarctica/South_Pole": ["Amundsenï¿½Scott South Pole Station, Antarctica"],
+	"Antarctica/South_Pole": ["Amundsen–Scott South Pole Station, Antarctica"],
 	"Antarctica/Casey": ["Casey Station, Antarctica"],
 	"Antarctica/Davis": ["Davis Station, Antarctica"],
 	"Antarctica/DumontDUrville": ["Dumont d'Urville Station, Antarctica"],
@@ -128,7 +128,7 @@ var zidtocountry = {
 	"Pacific/Pohnpei": ["Micronesia"],
 	"Atlantic/Faroe": ["Faroe Islands"],
 	"Africa/Libreville": ["Gabon"],
-	"Europe/London": ["Great Britain & Northern Ireland"],
+	"Europe/London": ["Great Britain & Northern Island"],
 	"America/Grenada": ["Grenada"],
 	"Asia/Tbilisi": ["Georgia"],
 	"America/Cayenne": ["French Guiana"],
@@ -171,7 +171,7 @@ var zidtocountry = {
 	"Asia/Tokyo": ["Japan"],
 	"Africa/Nairobi": ["Kenya"],
 	"Asia/Bishkek": ["Kyrgyzstan"],
-	"Asia/Phnom_Penh": ["Vietnam"],
+	"Asia/Phnom_Penh": ["Cambodia"],
 	"Pacific/Tarawa": ["Kiribati"],
 	"Indian/Comoro": ["Comoros"],
 	"America/St_Kitts": ["St Kitts & Nevis"],
@@ -342,7 +342,17 @@ var zidtocountry = {
 	"Africa/Johannesburg": ["South Africa"],
 	"Africa/Lusaka": ["Zambia"],
 	"Africa/Harare": ["Zimbabwe"],
+	//for whatever reason some where missing, so:
+	"Asia/Ho_Chi_Minh": ["Vietnam"]
 };
 moment.tz.add({
     "ztc": zidtocountry,
 });
+//takes a zid, returns the country.
+function ztc(zid){
+	if (zidtocountry.hasOwnProperty(zid)){
+		return zidtocountry[zid][0];
+	}else{
+		return false;
+	};
+};
