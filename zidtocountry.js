@@ -343,7 +343,7 @@ var zidtocountry = {
 	"Africa/Lusaka": ["Zambia"],
 	"Africa/Harare": ["Zimbabwe"],
 	//for whatever reason some where missing, so:
-	"Asia/Ho_Chi_Minh": ["Vietnam"]
+	"Asia/Ho_Chi_Minh": ["Vietnam"],
 	"Africa/Douala": ["Cameroon"],
 	"America/Adak": ["Aleutian Islands, USA"],
 	"America/Atikokan": ["Canada"],
