@@ -373,7 +373,7 @@ var zidtocountry = {
 	"America/Kentucky/Monticello": ["United States"],
 	"America/Matamoros": ["Mexico"],
 	"America/Menominee": ["United States"],
-	"America/Metlakatla": [United States"],
+	"America/Metlakatla": ["United States"],
 	"America/Moncton": ["Canada"],
 	"America/Nipigon": ["Canada"],
 	"America/Nome": ["Alaska, USA"],
