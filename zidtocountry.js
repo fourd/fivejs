@@ -386,7 +386,7 @@ var zidtocountry = {
 	"America/Rainy_River": ["Canada"],
 	"America/Resolute": ["Canada"],
 	"America/Santa_Isabel": ["Mexico"],
-	"America/Santarem": ["Crazil"],
+	"America/Santarem": ["Brazil"],
 	"America/Scoresbysund": ["Greenland"],
 	"America/Sitka": ["Alaska, USA"],
 	"America/Swift_Current": ["Canada"],
