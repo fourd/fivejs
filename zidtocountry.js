@@ -297,7 +297,7 @@ var zidtocountry = {
 	"America/El_Salvador": ["El Salvador"],
 	"Asia/Damascus": ["Syria"],
 	"Africa/Mbabane": ["Swaziland"],
-	"America/Grand_Turk": ["Turks and Caicos Is"],
+	"America/Grand_Turk": ["Turks and Caicos Islands"],
 	"Africa/Ndjamena": ["Chad"],
 	"Indian/Kerguelen": ["French Southern and Antarctic Lands"],
 	"Africa/Lome": ["Togo"],
