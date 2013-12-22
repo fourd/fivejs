@@ -320,7 +320,7 @@ var zidtocountry = {
 	"Europe/Simferopol": ["Ukraine"],
 	"Africa/Kampala": ["Uganda"],
 	"Pacific/Wake": ["US Minor Outlying Islands"],
-	"America/Anchorage": ["United States"],
+	"America/Anchorage": ["Alaska, USA"],
 	"America/Chicago": ["United States"],
 	"America/Phoenix": ["United States"],
 	"America/Los_Angeles": ["United States"],
